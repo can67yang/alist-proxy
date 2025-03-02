@@ -1,4 +1,4 @@
-name: Build Go Project
+name: release
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version: 1.21
 
       - name: Build
         run: |
@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-amd64-exe
-          path:alist-proxy.exe
+          path: alist-proxy.exe
